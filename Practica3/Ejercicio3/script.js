@@ -1,5 +1,10 @@
-let texto;
+//Muestra una sola vez el siguiente menú y, según la opción elegida, indica el nivel del usuario. Usa switch.
+//1. Usuario principiante
+//2. Usuario intermedio
+//3. Usuario avanzado
+//4. Salir
 
+let texto;
 
 alert("1.Usuario principiante\n2.Usuario intermedio\n3.Usuario avanzado\n4.Salir");
 

@@ -1,3 +1,5 @@
+//Amplía el ejercicio anterior: comprueba que ambos valores sean números válidos y distintos de cero antes de compararlos. Si algún valor no es válido, muestra un mensaje de error.
+
 const numero1 = Number(prompt("Introduce el primer numero"));
 const numero2 = Number(prompt("Introduce el segundo numero"));
 

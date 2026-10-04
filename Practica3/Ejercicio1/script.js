@@ -1,3 +1,5 @@
+//Pide al usuario dos números. Comprueba si son iguales, si el primero es mayor que el segundo o si el segundo es mayor que el primero. Muestra un mensaje de alerta con el resultado.
+
 const numero1 = prompt("Introduce el primer numero");
 const numero2 = prompt("Introduce el segundo numero");
 
