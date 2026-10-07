@@ -1,5 +1,3 @@
-//Funciones flecha. Transforma estas funciones en funciones flecha:
-
 function sumar(a, b) {
   return a + b + 100;
 }

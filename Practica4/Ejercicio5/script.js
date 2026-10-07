@@ -6,25 +6,35 @@ while(estado){
 
     let nota = Number(prompt("Dime una nota"));
     if(nota === -1){
+
+        if(total === 0){
+            console.log("El primer numero ha sido -1");
+        }
+
         console.log("Adios")
         estado = false;
+
     } else {
+
+        comprobar(nota);
         total = total + nota;
         pasos++;
-        comprobar(nota);
+        
     }
+
+    media(total/pasos)
 
 }
 
 function comprobar(numero){
-    if(numero.trim() === ""){
+    if(typeof numero === "string"){
         return false;
     }
 
     const nota = Number(numero);
 
     if(Number.isFinite(numero) && nota >= 0 && nota <= 10){
-        return numero;
+        return nota;
     }
 }
 
@@ -45,5 +55,5 @@ function clasificar(numero){
 }
 
 function media(a,b){
-    return a / b;
+   console.log(Number(a/b).toFixed(2));
 }
