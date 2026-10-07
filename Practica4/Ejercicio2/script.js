@@ -1,5 +1,6 @@
 function concatenar(valor1 , valor2 , valor3 , ...valor){
-    return valor.map((valor) => `${valor1},${valor2},${valor3},${valor}`);
+    console.log(valor1,valor2,valor3,...valor);
 }
 
-console.log(concatenar("Hola","Holo","Hilo","Helo","Hole","Holi"))
+concatenar("Hola","Hola","Hola","Hola","Hola","Hola");
+
