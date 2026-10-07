@@ -7,11 +7,12 @@ let notaMinima = 10;
 
 while(estado){
 
+    //isNan se tendría que usar
+
     let nota = prompt("Dime una nota");
 
-    if(nota === null || nota.trim() === ""){
+    if(nota === null || nota.trim() === "" || nota === undefined){
         console.log("No has puseto ningun valor");
-        continue;
     }
 
     nota = Number(nota);
@@ -29,6 +30,7 @@ while(estado){
     primeraEntrada = false;
 
     let notaValida = comprobar(nota);
+
     if(notaValida !== false){
         pasos++;
         total += notaValida;
