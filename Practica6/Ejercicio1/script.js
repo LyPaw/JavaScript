@@ -38,6 +38,14 @@ class Catalogo {
         this.libros = libros;
     }
 
+    existe(libro){
+        for(let i = 0; i < this.libros.length; i++){
+            if(this.libros[i].titulo.toLowerCase() === libro.titulo.toLowerCase()){
+                return true;
+            }
+        }
+    }
+
     agregarLibros(libro) {
         for (let i = 0; i < this.libros.length; i++) {
             if (this.libros[i] === libro) {
