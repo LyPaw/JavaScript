@@ -11,6 +11,7 @@ const textoCafe = `{
 
 console.log(textoCafe);
 
+//Lo convierto en objeto
 function leerCafe(texto) {
   try {
     return JSON.parse(texto);
@@ -22,38 +23,48 @@ function leerCafe(texto) {
 
 const cafe = leerCafe(textoCafe);
 
-console.log(typeof cafe);
+console.log("Tipo de dato de cafe : " + typeof cafe);
 console.log(cafe);
 
-
+//Propiedades de cafe
 console.log(cafe.title);
 console.log(cafe.ingredients);
 console.log(cafe.description);
 console.log(cafe.image);
 console.log(cafe.id);
 
+//Primera ficha
 const fichaCafe = {
-  title : cafe.title,
-  ingredients : cafe.ingredients,
-  image : cafe.image,
+  nombre : cafe.title,
+  ingredientes : cafe.ingredients,
+  imagen : cafe.image,
   id : cafe.id
 };
 
 console.log(fichaCafe);
 
+//Primera ficha a JSON
 const fichaCafeJson = JSON.stringify(fichaCafe,null,2)
 
+console.log("FichaCafeJSON : " + fichaCafeJson);
+
+//Titulo e imagen
+document.body.innerHTML+=("<h1>"+fichaCafe.nombre + "<br>" +
+    '<img height="300" src="' + fichaCafe.imagen + '">');
 
 
-document.body.innerHTML+=(
-    '<img height="300" src="' + cafe.image + '">'
-    +"<pre>"+fichaCafeJson);
-
+//Segunda ficha
 const fichaCafe2 = {
-  title : cafe.title,
-  ingredients : cafe.ingredients,
+  nombre : cafe.title,
+  ingredientes : cafe.ingredients,
   id : cafe.id,
 };
 
+//Segunda ficha a JSON
+const fichaCafe2Json = JSON.stringify(fichaCafe2,["id","nombre","ingredientes"],2)
 
-const fichaCafe2Json = JSON.stringify(fichaCafe2,["nombre","ingredientes","id"],2)
+document.body.innerHTML+=("Ficha en formato JSON : <br>" + "<pre>"+fichaCafe2Json);
+
+//JSON a objeto
+const cafe2 = leerCafe(fichaCafe2Json);
+console.log(cafe2);
